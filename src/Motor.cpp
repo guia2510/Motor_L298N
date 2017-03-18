@@ -85,15 +85,7 @@ int Motor::getSpeed() {
   return _speed;
 }
 
-int Motor::getSpeedPercent() {
-  return int((getSpeed() / 255.0 * 100) + 0.5); // add 0.5 for correct rounding
-}
-
 void Motor::setSpeed(int value) { // default: true
   _speed = constrain(value, 0, 255);
   update();
-}
-
-void Motor::setSpeedPercent(int value) { // default: true
-  setSpeed(int(value / 100.0 * 255));
 }
