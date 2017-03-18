@@ -17,9 +17,7 @@ public:
       bool isForward();
       bool isReverse();
       int getSpeed();
-      int getSpeedPercent();
       void setSpeed(int value);
-      void setSpeedPercent(int value);
 private:
       void update();
       void _setMotor(int pin_off, int pin_on);
